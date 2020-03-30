@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title>预约时间</title>
+	</head>
+	<body>
+		<div>
+			<input type="date" id="nowDate" />
+			<input type="time" id="nowTime" />
+			<input type="button" id="btn" value="获取时间" />
+			<input type="button" id="btnNow" value="当前时间" />
+		</div>
+	</body>
+	<script src="static/js/jquery-3.2.1.min.js"></script>
+	<script src="static/js/jquery-latest.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			NOW();
+		});
+		//初始化时间控件
+		function NOW() {
+			var now = new Date();
+			var nowYear = now.getFullYear(); //年
+			var nowMonth = now.getMonth() + 1 < 10 ? "0" + (now.getMonth() + 1) : now.getMonth(); //月
+			var nowDay = now.getDate() < 10 ? "0" + now.getDate() : now.getDate(); //日期
+			var nowHour = now.getHours() < 10 ? "0" + now.getHours() : now.getHours(); //时
+			var nowMinute = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes(); //分
+			var nowDate = nowYear + "-" + nowMonth + "-" + nowDay;
+			var nowTime = nowHour + ":" + nowMinute;
+
+			$("#nowDate").val(nowDate);
+			$("#nowTime").val(nowTime);
+		}
+
+		$(function() {
+			$("#btnNow").click(function() {
+				NOW();
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			$("#btn").click(function() {
+				var nDate = $("#nowDate").val();
+				var nTime = $("#nowTime").val();
+				alert(nDate + " " + nTime);
+			});
+	</script>
+</html>

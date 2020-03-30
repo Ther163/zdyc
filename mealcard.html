@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title>套餐卡</title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.card-info{
+			width: 91%;
+			display: flex;
+			justify-content: space-between;
+			padding: .2rem;
+			position: relative;
+			background: grey;
+			left: 2.5%;
+		}
+		.cardinfo{
+			display: flex;
+			align-items: center;
+			box-shadow:0px 3px 6px rgba(0,0,0,0.03);
+			width: 31%;
+			height: 2rem;
+			margin-right: .1rem;
+			justify-content: center;
+		}
+		.cardinfo p:last-child{
+			margin-left: .1rem;
+			font-size:.35rem;
+			color:rgba(32,33,36,1);
+			opacity:1;
+		}
+		.containing{
+			width: 95%;
+			height: auto;
+			box-shadow:0px 3px 6px rgba(0,0,0,0.03);
+			background: pink;
+			position: relative;
+			left: 2.5%;
+			margin-top: .1rem;
+		}
+		.cont-name{
+			display: flex;
+			justify-content: space-between;
+			padding: .2rem .2rem .2rem .2rem;
+		}
+		.cont-name p:first-child{
+			font-size:.4rem;
+			color:rgba(102,102,102,1);
+			opacity:1;
+		}
+		.cont-name p:last-child{
+			font-size:.35rem;
+			color:rgba(102,102,102,1);
+			opacity:1;
+		}
+		.info{
+			display: flex;
+			justify-content: space-between;
+			padding: .2rem .2rem .2rem .2rem;
+		}
+		.info p:first-child{
+			font-size:.35rem;
+			color:rgba(102,102,102,1);
+			opacity:1;
+		}
+		.info P:first-child{
+			font-size:.35rem;
+			color:rgba(102,102,102,1);
+			opacity:1;
+		}
+		.use{
+			padding: .2rem .2rem .2rem .2rem;
+			background: white;
+			box-shadow:0px 3px 6px rgba(0,0,0,0.03);
+			margin-top: .2rem;
+			width: 91%;
+			position: relative;
+			left: 2.5%;
+		}
+		.use p:first-child{
+			font-size:.4rem;
+			color:rgba(102,102,102,1);
+			opacity:1;
+		}
+		.use p:last-child{
+			font-size:.35rem;
+			color:rgba(102,102,102,1);
+			opacity:1;
+			margin-top: .1rem;
+			line-height: .6rem;
+		}
+		.btn{
+			position: relative;
+			left: 30%;
+			background: #F98E29;
+			width: 4rem;
+			height: 1.2rem;
+			text-align: center;
+			line-height: 1.2rem;
+			border-radius: .6rem;
+			margin-top: 2rem;
+			color: white;
+			opacity: 1;
+			font-size: .4rem;
+		}
+	</style>
+	
+	<body>
+		<div class="card-info">
+			<div class="cardinfo">
+				<p>
+					<img src="static/img/year.png" style="width: 1.1rem;height: .9rem;"/>
+				</p>
+				<p>年卡</p>
+			</div>
+			<div class="cardinfo">
+				<p>
+					<img src="static/img/next.png" style="width: 1.1rem;height: .9rem;"/>
+				</p>
+				<p>次卡</p>
+			</div>
+			<div class="cardinfo">
+				<p>
+					<img src="static/img/group.png" style="width: 1.1rem;height: .9rem;"/>
+				</p>
+				<p>组合卡</p>
+			</div>
+		</div>
+		<div class="containing">
+			<div class="cont-name">
+				<p>包含项目</p>
+				<p>总次数</p>
+			</div>
+			<div class="con-info">
+				<div class="info">
+					<p>小保养</p>
+					<p>2次</p>
+				</div>
+			</div>
+		</div>
+		<div class="use">
+			<p>使用须知</p>
+			<p>本套餐卡为计次使用，不包含项目材料费用。下单可使用直接扣除服务费。</p>
+		</div>
+		<div class="btn">申请套餐卡</div>
+	</body>
+	<script src="static/js/flexible.js"></script>
+</html>

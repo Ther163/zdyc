@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.tab{overflow: hidden;width: 90%;margin: 0 auto;}
+			.scroll-tab{display: flex;position: relative;}
+			.scroll-tab a{padding: 5px 10px;border-bottom: 2px solid transparent;text-decoration: none;color: #333333;font-size: 16px;font-family: "arial, helvetica, sans-serif","微软雅黑";}
+			.scroll-tab a.active{color: #0894ec;border-color: #0894ec;}
+		</style>
+	</head>
+	<body>
+		<div class="tab" id="tab">
+		            <div class="scroll-tab" id="scroll_tab" style="transform: translate(0px, 0px) translateZ(0px);">
+		                <a href="#" class="active">tab1</a>
+		                <a href="#">tab2</a>
+		                <a href="#">tab3</a>
+		                <a href="#">tab4</a>
+		                <a href="#">tab5</a>
+		                <a href="#">tab6</a>
+		                <a href="#">tab7</a>
+		                <a href="#">tab8</a>
+		            </div>
+		        </div>
+	</body>
+	<script>
+		var $scrollTab;
+		    var $tab=document.getElementById("tab");
+		    var touchstartX, touchstartY;
+		    var scrollMax;
+		    var mX,mY;
+		    var moveto;
+		    $tab.addEventListener('touchstart', function (e) {
+		        var touch = e.targetTouches[0];
+		        touchstartX = touch.pageX;
+		        touchstartY = touch.pageY;
+		        $scrollTab=document.getElementById("scroll_tab");
+		        scrollMax = $scrollTab.scrollWidth - $tab.clientWidth;  
+		    });
+		    $tab.addEventListener('touchmove', function (e) {
+		        var touch = e.targetTouches[0];
+		        mX = touch.pageX;
+		        mY = touch.pageY;
+		        if (touchstartY - mY <= 15 && touchstartY - mY >= -15) {
+		            var transform = $scrollTab.style.transform;
+		            transform = transform.replace("translate(", "");
+		            var currentX = Number(transform.substring(0, (transform.indexOf(",") - 2)));
+		            moveto = -(touchstartX - mX)/4.8;  
+		            moveto = moveto + currentX;
+		            if (moveto <= (100) && moveto >= (-scrollMax - 100)) {
+		                $scrollTab.style.transform="translate(" + moveto + "px, 0px) translateZ(0px)";
+		            }
+		        }
+		    });
+		    $tab.addEventListener('touchend', function (e) {
+		        $scrollTab.style.transitionDuration="600ms";
+		        if (moveto > 0) {
+		            $scrollTab.style.transform="translate(0px, 0px) translateZ(0px)";
+		        } else if (moveto < (-scrollMax)) {
+		            $scrollTab.style.transform="translate(" + (-scrollMax) + "px, 0px) translateZ(0px)";
+		        }
+		        setTimeout(function () {
+		            $scrollTab.style.transitionDuration="0ms";
+		        }, 600);
+		    });
+	</script>
+</html>

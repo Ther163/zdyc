@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title>门店详情</title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.sign {
+			position: absolute;
+			width: 95%;
+			background: white;
+			left: 2.5%;
+			border-radius: .15rem;
+			top: 28%;
+			box-shadow:0px 3px 6px rgba(0,0,0,0.03);
+		}
+
+		.sign-info {
+			padding: .2rem .5rem;
+		}
+
+		.sign-name {
+			font-size: .4rem;
+			font-weight: bold;
+			color: rgba(32, 33, 36, 1);
+			opacity: 1;
+			line-height: 1rem;
+		}
+
+		.sign-address {
+			width: 100%;
+			display: flex;
+			align-items: center;
+		}
+
+		.address {
+			width: 80%;
+			display: flex;
+			align-items: center;
+		}
+
+		.addre-left {
+			width: 100%;
+		}
+
+		.left-name {
+			width: 100%;
+			display: flex;
+			align-items: center;
+		}
+
+		.left-name p:last-child {
+			margin-left: .1rem;
+			font-size: .32rem;
+			color: #202124;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 1;
+			overflow: hidden;
+		}
+
+		.left-title {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			margin-top: .15rem;
+		}
+
+		.name {
+			width: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			margin-right: .1rem;
+		}
+
+		.name p:last-child {
+			font-size: .3rem;
+			color: rgba(234, 136, 42, 1);
+			opacity: 1;
+		}
+
+		.addre-right {
+			width: 30%;
+			text-align: center;
+		}
+		.addre-right p:last-child{
+			color: #666666;
+			font-size: .2rem;
+		}
+		.reservation {
+			width: 20%;
+			text-align: center;
+			margin-left: .5rem;
+		}
+		.reservation p:last-child{
+			color: #666666;
+			font-size: .32rem;
+		}
+		.welfare{
+			margin-top: .2rem;
+		}
+		.welfare ul{
+			width: 100%;
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+		}
+		.welfare ul li{
+			display: flex;
+		}
+		.welfare ul li p:last-child{
+			margin-left: .1rem;
+			font-size: .3rem;
+			color: #333333;
+		}
+		.major{
+			position: relative;
+			width: 95%;
+			left: 2.5%;
+			border-radius: .15rem;
+		}
+		.major p:first-child{
+			width: 89.5%;
+			padding: .1rem .5rem;
+			font-size:.35rem;
+			color:rgba(51,51,51,1);
+			opacity:1;
+		}
+		.major p:last-child{
+			width:89.5%;
+			display: flex;
+			padding: .1rem .5rem;
+		}
+		.available{
+			position: relative;
+			width: 95%;
+			left: 2.5%;
+			border-radius: .15rem;
+			margin-top: .5rem;
+		}
+		.available p:first-child{
+			width: 89.5%;
+			padding: .1rem .5rem;
+			font-size:.35rem;
+			color:rgba(51,51,51,1);
+			opacity:1;
+		}
+		.ava-item{
+			width: 100%;
+		}
+		.ava-item ul{
+			width: 100%;
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+		.ava-item ul li{
+			width: 30%;
+			box-shadow:0px 3px 6px rgba(0,0,0,0.03);
+			display: flex;
+			background: white;
+			margin-top: .2rem;
+			align-items: center;
+			height: 2rem;
+		}
+		.ava-item ul li p:first-child{
+			width: 15%;
+			text-align: center;
+		}
+		.ava-item ul li p:last-child{
+			width: 85%;
+			font-size:.32rem;
+			color:rgba(32,33,36,1);
+			opacity:1;
+		}
+		.popular{
+			position: relative;
+			width: 95%;
+			background: white;
+			left: 2.5%;
+			border-radius: .15rem;
+			margin-top: .5rem;
+		}
+		.popular p:first-child{
+			padding: .2rem .5rem;
+			font-size:.38rem;
+			color:rgba(51,51,51,1);
+		}
+		.popular-list{
+			display: flex;
+			align-items: center;
+			margin-top: .3rem;
+			height: 3rem;
+		}
+		.engineer{
+			width: 70%;
+			background: white;
+			display: flex;
+			height: 2rem;
+			box-shadow:0px 3px 6px rgba(0,0,0,0.03);
+			margin-right: .2rem;
+			align-items: center;
+
+		}
+		.engi-logo{
+			width: 50%;
+		}
+		.engi-logo img{
+			width: 4.5rem;
+			height:4rem;
+			z-index: 1111;
+			position: relative;
+			left: -13%;
+		}
+		.engi-info{
+			width: 50%;
+			text-align: center;
+			height: 2rem;
+			align-items: center;
+		}
+		.engi-info p:first-child{
+			font-size:14px;
+			color:rgba(102,102,102,1);
+			opacity:1;
+		}
+		.engi-info p:last-child{
+			font-size:10px;
+			color:rgba(187,187,187,1);
+			opacity:1;
+		}
+		.membership{
+			width: 30%;
+			background: white;
+			align-items: center;
+			height: 2rem;
+			text-align: center;
+			box-shadow:0px 3px 6px rgba(0,0,0,0.03);
+		}
+		.membership p:first-child{
+			font-size:14px;
+			color:rgba(102,102,102,1);
+			opacity:1;
+		}
+		.membership p:last-child{
+			font-size:10px;
+			color:rgba(187,187,187,1);
+			opacity:1;
+		}
+		.commit{
+			width: 95%;
+			height: auto;
+			position: relative;
+			left: 2.5%;
+			box-shadow:0px 3px 6px rgba(0,0,0,0.03);
+			margin-top: .2rem;
+			background: white;
+			border-radius: .15rem;
+		}
+		.comm-name{
+			display: flex;
+			font-size: .35rem;
+			color:rgba(51,51,51,1);
+			opacity:1;
+			justify-content: space-between;
+			padding: .2rem;
+		}
+		.comm-name p span{
+			margin-left: .2rem;
+		}
+		.comm-info{
+			display: flex;
+			justify-content: space-between;
+			padding: .2rem;
+		}
+		.avater{
+			width: 30%;
+		}
+		.avater img{
+			width: 2rem;
+			height: 2rem;
+			border-radius: 50%;
+		}
+		.info{
+			width: 70%;
+			
+		}
+		.store{
+			width: 95%;
+			height: auto;
+			position: relative;
+			left: 2.5%;
+			box-shadow:0px 3px 6px rgba(0,0,0,0.03);
+			margin-top: .2rem;
+			background: white;
+			border-radius: .15rem;
+			overflow: hidden;
+		}
+	</style>
+	<body style="background: gainsboro;">
+		<div style="position: relative;width: 100%;height: 6rem;">
+			<img src="static/img/chosegood/goods.png" style="width: 100%;height: 6rem;" />
+		</div>
+		<div class="sign">
+			<div class="sign-info">
+				<div class="sign-name">车享家汽车保养</div>
+				<div class="sign-address">
+					<div class="address">
+						<div class="addre-left">
+							<div class="left-name">
+								<p><img src="static/img/detail/positioning_icon@2x.png" style="width: .4rem;height: .5rem;margin-top: .1rem;" /></p>
+								<p>西安市雁塔区西安市雁塔区西安市雁塔区</p>
+							</div>
+							<div class="left-title">
+								<div class="name">
+									<p><img src="static/img/detail/time_icon@2x.png" style="width: .4rem;height: .4rem;margin-top: .15rem;" /></p>
+									<p>09:00-18:00</p>
+								</div>
+								<div class="name">
+									<p><img src="static/img/detail/station_icon@2x.png" style="width: .4rem;height: .4rem;margin-top: .15rem;" /></p>
+									<p>空闲2个工位</p>
+								</div>
+							</div>
+						</div>
+						<div class="addre-right">
+							<p><img src="static/img/detail/navigation_icon@2x.png" style="width: .6rem;height: .6rem;" /></p>
+							<p>0.8km</p>
+						</div>
+					</div>
+					<div style="width: .03rem;height: .8rem;background: #EBEBEB;"></div>
+					<div class="reservation">
+						<p><img src="static/img/detail/phone_icon@2x.png" style="width: .6rem;height: .6rem;" /></p>
+						<p>预约电话</p>
+					</div>
+				</div>
+				<div class="welfare">
+					<ul>
+						<li>
+							<p><img src="static/img/detail/wifi_icon@2x.png" style="width: .45rem;height: .4rem;"/></p>
+							<p>免费wifi</p>
+						</li>
+						<li>
+							<p><img src="static/img/detail/restaurant_icon@2x.png" style="width: .45rem;height: .4rem;"/></p>
+							<p>餐厅</p>
+						</li>
+						<li>
+							<p><img src="static/img/detail/rest_icon@2x.png" style="width: .45rem;height: .4rem;"/></p>
+							<p>客户休息室</p>
+						</li>
+						<li>
+							<p><img src="static/img/detail/coffee_icon@2x.png" style="width: .45rem;height: .4rem;"/></p>
+							<p>免费咖啡</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div style="height: 3rem;"></div>
+		<div class="major">
+			<p>专修品牌</p>
+			<p>
+				<img src="static/img/index/autologos.png" style="width: .5rem;height: .5rem;margin-right: .2rem;"/>
+				<img src="static/img/index/autologos.png" style="width: .5rem;height: .5rem;margin-right: .2rem;"/>
+				<img src="static/img/index/autologos.png" style="width: .5rem;height: .5rem;margin-right: .2rem;"/>
+			</p>
+		</div>
+		<div class="available">
+			<p>服务项目</p>
+			<div class="ava-item">
+				<ul>
+					<li>
+						<p>
+							<img src="static/img/detail/cleaning_icon@2x.png" style="width: .8rem;height: .8rem;"/>
+						</p>
+						<p>清洗服务</p>
+					</li>
+					<li>
+						<p>
+							<img src="static/img/detail/maintenance_icon@2x.png" style="width: .8rem;height: .8rem;"/>
+						</p>
+						<p>汽车养护</p>
+					</li>
+					<li>
+						<p>
+							<img src="static/img/detail/paint_icon@2x.png" style="width: .8rem;height: .8rem;"/>
+						</p>
+						<p>铂金喷漆</p>
+					</li>
+					<li>
+						<p>
+							<img src="static/img/detail/repair_icon@2x.png" style="width: .8rem;height: .8rem;"/>
+						</p>
+						<p>综合维修</p>
+					</li>
+					<li>
+						<p>
+							<img src="static/img/detail/modified_icon@2x.png" style="width: .8rem;height: .8rem;"/>
+						</p>
+						<p>汽车改装</p>
+					</li>
+					<li>
+						<p>
+							<img src="static/img/detail/goods_icon@2x.png" style="width: .8rem;height: .8rem;"/>
+						</p>
+						<p>汽车精品</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="popular">
+			<p>热门活动</p>
+			<div class="popular-list">
+				<div class="engineer">
+					<div class="engi-logo">
+						<img src="static/img/detail/tao.png" />
+					</div>
+					<div class="engi-info">
+						<p>项目套餐卡</p>
+						<p>尽快体验</p>
+					</div>
+				</div>
+				<div class="membership">
+					<p>会员卡</p>
+					<p>去领取</p>
+				</div>
+			</div>
+		</div>
+		<div class="commit">
+			<div class="comm-name">
+				<p>车主评价<span>3</span>条</p>
+				<p>更多评价</p>
+			</div>
+			<div class="comm-info">
+				<div class="avater">
+					<img src="static/img/user/avater.jpg" />
+				</div>
+				<div class="info">
+					<p>是不是傻</p>
+					<div style="display: flex;">
+						<p>星星</p>
+						<p>2分</p>
+						<p>时间</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="store">
+			<img />
+		</div>
+	</body>
+	<script src="static/js/flexible.js"></script>
+</html>

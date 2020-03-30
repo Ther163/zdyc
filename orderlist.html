@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title>卡包</title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.tab1 {
+			width: 100%;
+		}
+
+		.menu {
+			height: 1rem;
+			background: white;
+		}
+
+		.menu li {
+			float: left;
+			width: 16.5%;
+			text-align: center;
+			line-height: 1rem;
+			height: 1rem;
+			cursor: pointer;
+			color: #B7BBBF;
+			font-size: .4rem;
+			overflow: hidden;
+		}
+
+		.menu li.off {
+			color: #202124;
+			font-weight: bold;
+			font-size: .4rem;
+			border-bottom: .1rem solid #EA882A;
+		}
+
+		.menudiv {
+			border-top: 0;
+		}
+
+		.orderitem {
+			width: 91%;
+			height: auto;
+			position: relative;
+			left: 2.5%;
+			background: white;
+			margin-top: .2rem;
+			border-radius: .15rem;
+			padding: 0 .2rem .2rem .2rem;
+		}
+
+		.ordernum {
+			display: flex;
+			justify-content: space-between;
+			line-height: 1rem;
+			font-size: .35rem;
+			color: rgba(153, 153, 153, 1);
+			opacity: 1;
+			border-bottom: 1px solid #F2F2F2;
+		}
+
+		.ordernum .paystatus {
+			color: rgba(15, 76, 130, 1);
+			font-size: .3rem;
+		}
+
+		.paystatus1 {
+			color: rgba(230, 102, 69, 1);
+			font-size: .3rem;
+		}
+		.paystatus2 {
+			color:rgba(153,153,153,1);
+			font-size: .3rem;
+		}
+
+		.oedername {
+			line-height: 1rem;
+			font-size: .37rem;
+			color: rgba(51, 51, 51, 1);
+			opacity: 1;
+		}
+
+		.buy-detail {
+			display: flex;
+			justify-content: space-between;
+
+			margin-top: .5rem;
+			margin-bottom: .5rem;
+		}
+
+		.info {
+			display: flex;
+		}
+
+		.info>p {
+			width: 2.2rem;
+			height: .45rem;
+			border-radius: .4rem;
+			border: 1px solid #D8D8D8;
+			color: #666666;
+			font-size: .3rem;
+			text-align: center;
+			margin-right: .2rem;
+		}
+
+		.price {
+			font-size: .4rem;
+			color: rgba(51, 51, 51, 1);
+			opacity: 1;
+		}
+
+		.order-time {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.order-time>div:first-child {
+			font-size: .35rem;
+			color: rgba(102, 102, 102, 1);
+			opacity: 1;
+			margin-top: .2rem;
+		}
+
+		.order-time .orderstatus {
+			width: 1.6rem;
+			height: .7rem;
+			text-align: center;
+			line-height: .7rem;
+			border: 1px solid rgba(15, 76, 130, 1);
+			color: rgba(15, 76, 130, 1);
+			font-size: .3rem;
+		}
+		.orderstatus1{
+			width: 1.6rem;
+			height: .7rem;
+			text-align: center;
+			line-height: .7rem;
+			background:rgba(249,145,44,1);
+			color: white;
+		}
+	</style>
+	<body style="background: #F1F1F1;">
+		<div class="tab1" id="tab1">
+			<div class="menu">
+				<ul>
+					<li id="one1" onclick="setTab('one',1)">全部</li>
+					<li id="one2" onclick="setTab('one',2)">预约</li>
+					<li id="one3" onclick="setTab('one',3)">待付款</li>
+					<li id="one4" onclick="setTab('one',4)">进行中</li>
+					<li id="one5" onclick="setTab('one',5)">已完成</li>
+					<li id="one6" onclick="setTab('one',6)">质保中</li>
+				</ul>
+			</div>
+			<div class="menudiv">
+				<div id="con_one_1">
+					<div class="orderitem">
+						<div class="ordernum">
+							<p>
+								<span>订单编号：</span>
+								<span>6421542542154</span>
+							</p>
+							<p class="paystatus">待消费</p>
+						</div>
+						<div class="oedername">车动力养护中心</div>
+						<div class="buy-detail">
+							<div class="info">
+								<p>更换空调滤芯</p>
+								<p>更换火花塞</p>
+								<p>更换火花塞</p>
+							</div>
+							<div class="price">￥289</div>
+						</div>
+						<div class="order-time">
+							<div>预计时间：2019年11月12日</div>
+							<div class="orderstatus">二维码</div>
+						</div>
+					</div>
+					<div class="orderitem">
+						<div class="ordernum">
+							<p>
+								<span>订单编号：</span>
+								<span>6421542542154</span>
+							</p>
+							<p class="paystatus1">待付款</p>
+						</div>
+						<div class="oedername">车动力养护中心</div>
+						<div class="buy-detail">
+							<div class="info">
+								<p>更换空调滤芯</p>
+								<p>更换火花塞</p>
+								<p>更换火花塞</p>
+							</div>
+							<div class="price">￥289</div>
+						</div>
+						<div class="order-time">
+							<div>预计时间：2019年11月12日</div>
+							<div class="orderstatus1">去支付</div>
+						</div>
+					</div>
+					<div class="orderitem">
+						<div class="ordernum">
+							<p>
+								<span>订单编号：</span>
+								<span>6421542542154</span>
+							</p>
+							<p class="paystatus2" style="display: flex;">
+								<img src="static/img/chosegood/del.png" style="width: .3rem;height: .3rem;margin-top: .35rem;margin-right: .1rem;"/>
+								已取消
+							</p>
+						</div>
+						<div class="oedername">车动力养护中心</div>
+						<div class="buy-detail">
+							<div class="info">
+								<p>更换空调滤芯</p>
+								<p>更换火花塞</p>
+								<p>更换火花塞</p>
+							</div>
+							<div class="price">￥289</div>
+						</div>
+						<div class="order-time">
+							<div>预计时间：2019年11月12日</div>
+							<!-- <div>二维码</div> -->
+						</div>
+					</div>
+					<div class="orderitem">
+						<div class="ordernum">
+							<p>
+								<span>订单编号：</span>
+								<span>6421542542154</span>
+							</p>
+							<p class="paystatus2">已完成</p>
+						</div>
+						<div class="oedername">车动力养护中心</div>
+						<div class="buy-detail">
+							<div class="info">
+								<p>更换空调滤芯</p>
+								<p>更换火花塞</p>
+								<p>更换火花塞</p>
+							</div>
+							<div class="price">￥289</div>
+						</div>
+						<div class="order-time">
+							<div>预计时间：2019年11月12日</div>
+							<!-- <div>二维码</div> -->
+						</div>
+					</div>
+				</div>
+				<div id="con_one_2" style="display:none;">
+					暂无预约订单
+				</div>
+				<div id="con_one_3" style="display:none;">
+					暂无待付款订单
+				</div>
+				<div id="con_one_4" style="display:none;">
+					暂无进行中订单
+				</div>
+				<div id="con_one_5" style="display:none;">
+					暂无完成订单
+				</div>
+				<div id="con_one_6" style="display:none;">
+					暂无质保中订单
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+	</body>
+	<script src="static/js/flexible.js"></script>
+	<script src="static/js/jquery-3.2.1.min.js"></script>
+	<script src="static/js/index.js"></script>
+</html>

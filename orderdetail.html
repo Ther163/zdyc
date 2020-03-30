@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title>订单详情</title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		header{
+			width: 100%;
+			height: 1.8rem;
+			background: white;
+			box-shadow:0px 3px 6px rgba(0,0,0,0.03);
+			border-radius: .15rem;
+			display: flex;
+			align-items: center;
+			position: fixed;
+		}
+		.logo{
+			width: 25%;
+			text-align: center;
+		}
+		.logo img{
+			width: 1.2rem;
+			height: 1.2rem;
+		}
+		.logo-detail{
+			width: 55%;
+			font-size:.32rem;
+			line-height:.6rem;
+			color:rgba(96,100,107,1);
+			opacity:1;
+		}
+		.qr{
+			width: 1.2rem;
+			height: .5rem;
+			text-align: center;
+			line-height: .5rem;
+			border: 1px solid #E6A545;
+			color: #E6A545;
+			font-size: .32rem;
+			border-radius: .1rem;
+		}
+		.travel{
+			width: 95%;
+			height: auto;
+			position: relative;
+			left: 2.5%;
+			background: white;
+		}
+		.trevel-info{
+			display: flex;
+			align-items: center;
+		}
+		.trevel-info>p:first-child{
+			width: 40%;
+			text-align: left;
+			line-height: 1rem;
+			padding-left: .5rem;
+			color: #929497;
+			font-size: .35rem;
+		}
+		.trevel-info>p:last-child{
+			width: 60%;
+			text-align: left;
+			line-height: 1rem;
+			color: #202124;
+			font-size: .33rem;
+		}
+		.price-deail{
+			width: 95%;
+			height: auto;
+			position: relative;
+			left: 2.5%;
+			background: white;
+			margin-top: .2rem;
+		}
+		.service{
+			width: 100%;
+			height: auto;
+			padding: .2rem .5rem .2rem .5rem;
+			border-bottom: 1px solid #F1F1F1;
+		}
+		.ser{
+			display: flex;
+		}
+		.logo{
+			width: 10%;
+			text-align: center;
+		}
+		.logo img{
+			width: .6rem;
+			height: .6rem;
+		}
+		.ser-namesa{
+			font-size:.38rem;
+			color:rgba(102,102,102,1);
+			opacity:1;
+			margin-left: .2rem;
+			margin-top: .1rem;
+		}
+		.ser-name{
+			display: flex;
+			font-size:.39rem;
+			color:rgba(51,51,51,1);
+			opacity:1;
+			margin-top: .3rem;
+			margin-bottom: .3rem;
+		}
+		.sers-name{
+			display: flex;
+			font-size:.3rem;
+			color:rgba(187,187,187,1);
+			opacity:1;
+			margin-top: .3rem;
+		}
+		.name{
+			width: 40%;
+		}
+		.price{
+			width: 20%;
+		}
+		.num{
+			width: 20%;
+		}
+		.discount{
+			width: 20%;
+		}
+		.count{
+			width: 90%;
+			text-align: right;
+			background: white;
+			line-height: 1.4rem;
+			position: relative;
+			left: 2.5%;
+			font-size:.38rem;
+			color:rgba(102,102,102,1);
+			opacity:1;
+			padding-right: .5rem;
+		}
+		.count>span{
+			font-size:.55rem;
+			color:rgba(239,44,44,1);
+			opacity:1;
+		}
+	</style>
+	<body style="background: #F1F1F1;">
+		<header>
+			<div class="logo">
+				<img src="static/img/index/autologos.png" />
+			</div>
+			<div class="logo-detail">
+				<p>北京奔驰 C级 260L 运动版</p>
+				<p>陕A·ET618 李志</p>
+			</div>
+			<div class="qr">二维码</div>
+		</header>
+		<div style="height: 2rem;"></div>
+		<div class="travel">
+			<div class="trevel-info">
+				<p>进场公里数</p>
+				<p>45124km</p>
+			</div>
+			<div class="trevel-info">
+				<p>接车员</p>
+				<p>汪鹏</p>
+			</div>
+			<div class="trevel-info">
+				<p>订单创建时间</p>
+				<p>2020年01月07日 10:12:12</p>
+			</div>
+			<div class="trevel-info">
+				<p>订单状态</p>
+				<p>进行中</p>
+			</div>
+		</div>
+		<div class="price-deail">
+			<div class="service">
+				<div class="ser">
+					<div class="logo">
+						<img src="static/img/chosegood/ser.png"/>
+					</div>
+					<div class="ser-namesa">服务项目</div>
+				</div>
+				<div class="sers-name">
+					<p class="name">名称</p>
+					<p class="price">单价</p>
+					<p class="num">数量</p>
+					<p class="discount">折扣</p>
+				</div>
+				<div class="ser-name">
+					<p class="name">更换防冻液</p>
+					<p class="price">￥150</p>
+					<p class="num">1</p>
+					<p class="discount"></p>
+				</div>
+				<div class="ser-name">
+					<p class="name">空调管路杀菌</p>
+					<p class="price">￥150</p>
+					<p class="num">1</p>
+					<p class="discount"></p>
+				</div>
+			</div>
+			<div class="service">
+				<div class="ser">
+					<div class="logo">
+						<img src="static/img/chosegood/mater.png"/>
+					</div>
+					<div class="ser-namesa">服务材料</div>
+				</div>
+				<div class="sers-name">
+					<p class="name">名称</p>
+					<p class="price">单价</p>
+					<p class="num">数量</p>
+					<p class="discount">折扣</p>
+				</div>
+				<div class="ser-name">
+					<p class="name">防冻液</p>
+					<p class="price">￥150</p>
+					<p class="num">1</p>
+					<p class="discount"></p>
+				</div>
+				<div class="ser-name">
+					<p class="name">空调管路杀菌喷雾</p>
+					<p class="price">￥150</p>
+					<p class="num">2</p>
+					<p class="discount"></p>
+				</div>
+			</div>
+		</div>
+		<div class="count">
+			总计：<span>600.00元</span>
+		</div>
+	</body>
+	<script src="static/js/flexible.js"></script>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title>下单完成</title>
+	</head>
+	<style>
+		.complete{
+			width: 100%;
+			text-align: center;
+			margin-top: 2rem;
+			font-size:.5rem;
+			font-weight:400;
+			color:rgba(51,51,51,1);
+			opacity:1;
+		}
+		.com-logo>img{
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+		.com-info{
+			width: 100%;
+			text-align: center;
+			margin-top: 1rem;
+		}
+		.orderno{
+			display: flex;
+			justify-content: center;
+		}
+		.orderno>p:first-child{
+			font-size:.38rem;
+			font-weight:400;
+			color:rgba(146,148,151,1);
+			opacity:1;
+		}
+		.orderno>p:last-child{
+			font-size:.38rem;
+			font-weight:400;
+			color:rgba(96,100,107,1);
+			opacity:1;
+		}
+		.com-btn{
+			display: flex;
+			margin-top: .5rem;
+		}
+		.combtn{
+			width: 45%;
+			height: 1rem;
+			text-align: center;
+			line-height: 1rem;
+			border:1px solid rgba(234,136,42,1);
+			opacity:1;
+			border-radius:4px;
+			color:rgba(249,142,41,1);
+			font-size:.4rem;
+			margin-left: 3%;
+		}
+		.com-serveice{
+			width: 90%;
+			display: flex;
+			margin-left: 4%;
+			margin-top: .3rem;
+		}
+		.se-logo{
+			width: 10%;
+			text-align: center;
+			
+		}
+		.se-logo>img{
+			width: .5rem;
+			height: .5rem;
+		}
+		.sedetail{
+			width: 90%;
+			overflow: hidden;
+			font-size:.35rem;
+			font-weight:400;
+			color:rgba(183,187,191,1);
+			opacity:1;
+		}
+	</style>
+	<body>
+		<div class="complete">
+			<div class="com-logo">
+				<img src="static/img/confirmgoods/pres.png" />
+			</div>
+			<div>下单成功</div>
+		</div>
+		<div class="com-info">
+			<div class="orderno">
+				<p>订单编号：</p>
+				<p>GHJES154215DEQ</p>
+			</div>
+			<div class="orderno">
+				<p>预约时间：</p>
+				<p>2020年01月20日</p>
+			</div>
+		</div>
+		<div class="com-btn">
+			<div class="combtn">返回首页</div>
+			<div class="combtn">查看订单</div>
+		</div>
+		<div class="com-serveice">
+			<p class="se-logo">
+				<img src="static/img/confirmgoods/promote.png" />
+			</p>
+			<p class="sedetail">请您在订单有效内前往门店进行保养，预约保留15分钟，请准时到店避免等位，实际保养时，工作人员可能会根据车辆情况进行项目微调。</p>
+		</div>
+	</body>
+	<script src="static/js/jquery-3.2.1.min.js"></script>
+	<script src="static/js/flexible.js"></script>
+</html>

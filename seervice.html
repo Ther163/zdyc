@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title>服务项目</title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.tab1 {
+			width: 100%;
+			overflow: scroll;
+		}
+
+		.menu {
+			width: 100%;
+			height: 1rem;
+			background: white;
+			overflow: scroll;
+			overflow-x: scroll;
+		}
+
+		.menu li {
+			float: left;
+			width: 20%;
+			text-align: center;
+			line-height: 1rem;
+			height: 1rem;
+			cursor: pointer;
+			color: #B7BBBF;
+			font-size: .4rem;
+			overflow: scroll;
+		}
+
+		.menu li.off {
+			color: #202124;
+			font-weight: bold;
+			font-size: .4rem;
+			border-bottom: .1rem solid #EA882A;
+		}
+
+		.menudiv {
+			border-top: 0;
+		}
+
+		.seritem {
+			width: 95%;
+			border: 1px solid rgba(238, 238, 238, 1);
+			border-radius: .15rem;
+			align-items: center;
+			background: white;
+			position: relative;
+			left: 2.5%;
+			margin-top: .2rem;
+		}
+
+		.sername {
+			width: 95%;
+			text-align: center;
+			font-size: .4rem;
+			font-weight: bold;
+			color: rgba(32, 33, 36, 1);
+			opacity: 1;
+			line-height: 1rem;
+			margin-right: .3rem;
+		}
+
+		.sercontent {
+			display: flex;
+			margin-top: .2rem;
+			padding-bottom: .35rem;
+			align-items: center;
+			border-bottom: 1px solid #F8F8F8;
+		}
+
+		.con-logo {
+			width: 20%;
+			text-align: center;
+		}
+
+		.con-logo img {
+			width: .6rem;
+			height: .6rem;
+		}
+
+		.con-info {
+			width: 60%;
+		}
+
+		.con-info>p {
+			line-height: .7rem;
+		}
+
+		.stand {
+			width: 1.5rem;
+			height: .5rem;
+			text-align: center;
+			line-height: .5rem;
+			background: rgba(234, 136, 42, 0.11);
+			color: rgba(234, 136, 42, 1);
+			font-size: .3rem;
+		}
+		.sebtn{
+			width:4.2rem;
+			height: 1.2rem;
+			border-radius: .6rem;
+			text-align: center;
+			line-height: 1.2rem;
+			background: #F98E29;
+			color: white;
+			font-size: .4rem;
+			position: relative;
+			left: 33%;
+			margin-top:.8rem;
+			margin-bottom: .5rem;
+		}
+	</style>
+	<body style="background: #F1F1F1;">
+		<div class="tab1" id="tab1">
+			<div class="menu">
+				<ul style="list-style: none;width100%;overflow: scroll;">
+					<li id="one1" onclick="setTab('one',1)">汽车养护</li>
+					<li id="one2" onclick="setTab('one',2)">综合维修</li>
+					<li id="one3" onclick="setTab('one',3)">钣金喷漆</li>
+					<li id="one4" onclick="setTab('one',4)">清洗服务</li>
+					<li id="one5" onclick="setTab('one',5)">美容装潢</li>
+					<li id="one6" onclick="setTab('one',6)">精品装饰</li>
+					<li id="one6" onclick="setTab('one',7)">汽车改装</li>
+				</ul>
+			</div>
+			<div class="menudiv">
+				<div id="con_one_1">
+					<div class="seritem">
+						<div class="sername">小保养</div>
+						<div class="sercontent">
+							<div class="con-logo">
+								<img src="static/img/card/chose.png" />
+							</div>
+							<div class="con-info">
+								<p>工时：40分钟</p>
+								<p>里程：5000km/次或6个月</p>
+							</div>
+							<div class="stand">项目标准</div>
+						</div>
+					</div>
+					<div class="seritem">
+						<div class="sername">大保养</div>
+						<div class="sercontent">
+							<div class="con-logo">
+								<img src="static/img/card/nochose.png" />
+							</div>
+							<div class="con-info">
+								<p>工时：40分钟</p>
+								<p>里程：5000km/次或6个月</p>
+							</div>
+							<div class="stand">项目标准</div>
+						</div>
+					</div>
+					<div class="seritem">
+						<div class="sername" style="width: 100%;display: flex;">
+							<p style="width: 98%;text-align: center;">发动机养护</p>
+							<p>
+								<img src="static/img/card/top.png" style="width: .4rem;height: .3rem;margin-right: .2rem;"/>
+							</p>
+						</div>
+						<div class="sercontent">
+							<div class="con-logo">
+								<img src="static/img/card/nochose.png" />
+							</div>
+							<div class="con-info">
+								<p style="color: #333333;font-size: .38rem;">清洁系统养护</p>
+								<p>工时：40分钟</p>
+								<p>里程：5000km/次或6个月</p>
+							</div>
+							<div class="stand">项目标准</div>
+						</div><div class="sercontent">
+							<div class="con-logo">
+								<img src="static/img/card/nochose.png" />
+							</div>
+							<div class="con-info">
+								<p style="color: #333333;font-size: .38rem;">发动机线路养护</p>
+								<p>工时：40分钟</p>
+								<p>里程：5000km/次或6个月</p>
+							</div>
+							<div class="stand">项目标准</div>
+						</div>
+						
+						<div class="sercontent">
+							<div class="con-logo">
+								<img src="static/img/card/nochose.png" />
+							</div>
+							<div class="con-info">
+								<p style="color: #333333;font-size: .38rem;">排气系统清洗保养</p>
+								<p>工时：40分钟</p>
+								<p>里程：5000km/次或6个月</p>
+							</div>
+							<div class="stand">项目标准</div>
+						</div>
+					</div>
+					<div class="sebtn">
+						去选店
+					</div>
+				</div>
+				<div id="con_one_2" style="display:none;">
+					暂无
+				</div>
+				<div id="con_one_3" style="display:none;">
+					暂无
+				</div>
+				<div id="con_one_4" style="display:none;">
+					暂无
+				</div>
+				<div id="con_one_5" style="display:none;">
+					暂无
+				</div>
+				<div id="con_one_6" style="display:none;">
+					暂无
+				</div>
+				<div id="con_one_6" style="display:none;">
+					暂无
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+	</body>
+	<script src="static/js/flexible.js"></script>
+	<script src="static/js/jquery-3.2.1.min.js"></script>
+	<script src="static/js/index.js"></script>
+</html>

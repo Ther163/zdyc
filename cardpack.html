@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title>卡包</title>
+		<link rel="stylesheet" href="static/css/index.css" />
+	</head>
+	<body>
+		<div class="tab1" id="tab1">
+			<div class="menu">
+				<ul>
+					<li id="one1" onclick="setTab('one',1)">会员卡</li>
+					<li id="one2" onclick="setTab('one',2)">优惠券</li>
+					<li id="one3" onclick="setTab('one',3)">套餐卡</li>
+				</ul>
+			</div>
+			<div class="menudiv">
+				<div id="con_one_1">
+					<div class="cardinfo" style="width: 95%;height: 4.5rem;z-index: 111;">
+						<div style="position: relative;width: 100%;height: 100%;z-index: 1;">
+							<img src="static/img/card/bg.png" style="width: 100%;height: 100%;z-index: 1;"/>
+						</div>
+						<div class="cardsname" style="width: 90%;position: absolute;top: 1%;z-index: 111;display: flex;justify-content: space-between;padding: .8rem .5rem .5rem .8rem;">
+							<p>中道养车（西安）店</p>
+							<p>N0.001</p>
+						</div>
+						<div class="card-info" style="width: 90%;position: absolute;top:50%;z-index: 111;">
+							<div class="bala">
+								<p>余额：</p>
+								<p>854.00</p>
+							</div>
+							<div class="dis">
+								<p>折扣：</p>
+								<p>9折</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="con_one_2" style="display:none;">
+					<div class="hyience">
+						<div class="coupon-name">
+							<div class="cou-left">
+								<div class="cou-logo">
+									<img src="static/img/card/cop.png" />
+								</div>
+								<div class="left-naem">车享家汽车养护</div>
+							</div>
+							<div class="cou-right">
+								<p class="right-name">去逛逛</p>
+								<p>
+									<img src="static/img/user/right.png" />
+								</p>
+							</div>
+						</div>
+						<div class="coupon-item">
+							<div class="item-left">
+								<div class="itemprice">
+									<p>
+										<span>￥</span>
+										<span>40.00</span>
+									</p>
+									<p style="margin-left: .1rem;">满300减20</p>
+								</div>
+								<div class="pricetiem">
+									<p class="glibly">小保养</p>
+									<p style="color: #999999;">2020.01.01-2020.12.12</p>
+								</div>
+							</div>
+							<div class="item-right">
+								去使用
+							</div>
+						</div>
+						<div class="coupon-item">
+							<div class="item-left">
+								<div class="itemprice">
+									<p>
+										<span>￥</span>
+										<span>40.00</span>
+									</p>
+									<p style="margin-left: .1rem;">满300减20</p>
+								</div>
+								<div class="pricetiem">
+									<p class="glibly">铂金喷漆</p>
+									<p style="color: #999999;">2020.01.01-2020.12.12</p>
+								</div>
+							</div>
+							<div class="item-right">
+								去使用
+							</div>
+						</div>
+					</div>
+					<div class="hyience">
+						<div class="coupon-name">
+							<div class="cou-left">
+								<div class="cou-logo">
+									<img src="static/img/card/ciso.png" />
+								</div>
+								<div class="left-naem">德胜汽车养护中心</div>
+							</div>
+							<div class="cou-right">
+								<p class="right-name">去逛逛</p>
+								<p>
+									<img src="static/img/user/right.png" />
+								</p>
+							</div>
+						</div>
+						<div class="coupon-item">
+							<div class="item-left">
+								<div class="itemprice">
+									<p>
+										<span>￥</span>
+										<span>40.00</span>
+									</p>
+									<p style="margin-left: .1rem;">满300减20</p>
+								</div>
+								<div class="pricetiem">
+									<p class="glibly">小保养</p>
+									<p style="color: #999999;">2020.01.01-2020.12.12</p>
+								</div>
+							</div>
+							<div class="item-right">
+								去使用
+							</div>
+						</div>
+						<div class="coupon-item">
+							<div class="item-left">
+								<div class="itemprice">
+									<p>
+										<span>￥</span>
+										<span>40.00</span>
+									</p>
+									<p style="margin-left: .1rem;">满300减20</p>
+								</div>
+								<div class="pricetiem">
+									<p class="glibly">铂金喷漆</p>
+									<p style="color: #999999;">2020.01.01-2020.12.12</p>
+								</div>
+							</div>
+							<div class="item-right">
+								去使用
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="con_one_3" style="display:none;">
+					<div class="cardinfo">
+						<div class="cardsname">
+							<p>中道养车（西安）店</p>
+							<p>N0.001</p>
+						</div>
+						<div class="con3-info">
+							<div class="cardname">项目套餐卡</div>
+							<div class="showcard">查看项目</div>
+							<div class="cardtime">有效期：2021-03-18</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+		
+	</body>
+	<script src="static/js/flexible.js"></script>
+	<script src="static/js/jquery-3.2.1.min.js"></script>
+	<script src="static/js/index.js"></script>
+</html>
