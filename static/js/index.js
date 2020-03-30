@@ -56,6 +56,16 @@ $(document).ready(function() {
 		//console.log($(this).index());
 
 	});
+	
+	/*sz 隐藏显示*/
+	$("#con_one_1 .seritem").each(function(i,v){
+		$(this).children(".sercontent").not(":eq(0)").hide();
+	});
+	$(document).on("click",".seritem .sername .switch",function(){
+		$(this).parent(".sername").siblings(".sercontent").not(":eq(0)").toggle();
+	});
+	
+	/*end*/
 });
 //选择商品的修改
 $(function() {
