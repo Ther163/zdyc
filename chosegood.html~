@@ -178,7 +178,7 @@
 		$(".removegoods").on('click',function(){
 			var width = $(this).parents('.detail').width();
 			$(this).parents(".detail").animate({'marginLeft':width},1500,function(){
-				$(this).remove();
+				$(this).remove()
 			});
 		})
 	</script>
